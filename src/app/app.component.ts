@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-import { Route } from '@angular/router';
+import { Router, Route } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -7,5 +7,5 @@ import { Route } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
+  constructor(public router: Router) {}
 }

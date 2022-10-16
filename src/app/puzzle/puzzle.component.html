@@ -1,0 +1,38 @@
+<p>----------PuzzleComponent----------</p>
+<a
+  [routerLink]="[
+    '/puzzle',
+    {
+      outlets: {
+        'a-outlet': ['on-a'],
+        'b-outlet': ['on-b']
+      }
+    }
+  ]"
+  >OnA</a
+>
+<a
+  [routerLink]="[
+    '/puzzle',
+    {
+      outlets: {
+        'a-outlet': ['on-a'],
+        'b-outlet': ['on-b']
+      }
+    }
+  ]"
+  >OnB</a
+>
+<a routerLink="on-c">OnC</a>
+
+<div [ngClass]="{ lev_b: true }">.</div>
+<div [ngClass]="{ lev_c: true }">.</div>
+<div [ngClass]="{ lev_d: true }">.</div>
+<br />
+<div [ngClass]="{ cell_1: true }">.</div>
+<div [ngClass]="{ cell_2: true }">.</div>
+<div [ngClass]="{ cell_3: true }">.</div>
+<div [ngClass]="{ cell_4: true }">.</div>
+
+<router-outlet name="a-outlet"> </router-outlet>
+<router-outlet name="b-outlet"> </router-outlet>

@@ -1,3 +1,4 @@
-<p>main works!</p>
-<a routerLink="/article">artiles</a>
-<router-outlet></router-outlet>
+<div *ngIf="router.url.includes('main')">
+  <div>mainComponent</div>
+</div>
+<p>------------------MainComponent----------</p>

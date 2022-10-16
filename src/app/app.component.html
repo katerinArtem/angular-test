@@ -1,2 +1,21 @@
-<p>app-component works!</p>
-<app-main></app-main>
+<p>----------------Global Frame-----------------</p>
+<nav>
+  <a routerLink="">Main</a>
+  <div></div>
+  <a routerLink="articles">Articles</a>
+  <div></div>
+  <a
+    [routerLink]="[
+      '/puzzle',
+      {
+        outlets: {
+          'a-outlet': ['on-a'],
+          'b-outlet': ['on-b']
+        }
+      }
+    ]"
+    >Puzzle</a
+  >
+  <div></div>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+<p>-----ItemComponent-----</p>
+<div *ngIf="!router.url.includes('details')">
+  <h3>Блюдо {{ id }}</h3>
+  <img src="{{ this.image }}" />
+  <button (click)="expand()">OpenFullImage</button>
+</div>
+<!--
+<div *ngIf="image">{{ image }}</div>
+-->
+<router-outlet></router-outlet>

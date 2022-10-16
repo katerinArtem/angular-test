@@ -1,3 +1,16 @@
-<p>
-article works!
-</p>
+<p>----------ArticleComponent---------</p>
+
+<button (click)="_createComponent()">LoadItem</button>
+
+<label for="checkid"> save items on refresh </label>
+<input
+  id="checkid"
+  (change)="saveFlagOnChange()"
+  type="checkbox"
+  value="saveFlag"
+  [(ngModel)]="saveFlag"
+/>
+
+<ng-container #container></ng-container>
+
+<router-outlet></router-outlet>
