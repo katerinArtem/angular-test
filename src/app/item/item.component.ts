@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnDestroy,
+  ViewEncapsulation,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -6,6 +12,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css'],
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class ItemComponent implements OnInit, OnDestroy {
   private routeSubscription: Subscription;
@@ -24,7 +31,6 @@ export class ItemComponent implements OnInit, OnDestroy {
   }
   @Input() id: number | undefined;
   @Input() image: any | undefined;
-
   ngOnInit() {}
 
   expand() {

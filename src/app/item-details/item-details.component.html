@@ -1,3 +1,4 @@
 <p>-----ItemDetailsComponent-----</p>
 <div *ngIf="image">{{ image }}</div>
-<img src="{{ this.image }}" />
+<img [src]="image" (error)="imgErrorHandler($event)" />
+<p>{{ this.errorMsg }}</p>

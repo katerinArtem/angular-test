@@ -18,6 +18,10 @@ export class ItemDetailsComponent implements OnDestroy {
       this.image = queryParam['image'];
     });
   }
+  public errorMsg: string = '';
+  imgErrorHandler(event) {
+    this.errorMsg = 'some error occured';
+  }
   @Input() image: any | undefined;
   ngOnDestroy(): void {
     this.querySubscription.unsubscribe();

@@ -1,3 +1,13 @@
 input[type='checkbox'] {
   vertical-align: middle;
 }
+input[type='range'] {
+  vertical-align: middle;
+}
+#r_lab {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+button {
+  background-color: red;
+}

@@ -1,6 +1,36 @@
 <p>----------ArticleComponent---------</p>
 
-<button (click)="_createComponent()">LoadItem</button>
+<div>
+  <p>Example: https://random.dog/09f8ecf4-c22b-49f4-af24-29fb5c8dbb2d.jpg</p>
+</div>
+
+<div>
+  <div class="form-group">
+    <label>Image Link </label>
+    <input class="form-control" name="url" [(ngModel)]="url" />
+  </div>
+  <br />
+  <div class="form-group">
+    <button class="btn btn-default" (click)="_createComponent(true)">
+      AddFromLocal
+    </button>
+  </div>
+</div>
+
+<br />
+<div>
+  <input
+    type="range"
+    min="2"
+    max="10"
+    value="3"
+    step="1"
+    [(ngModel)]="maxItems"
+  />
+  <label id="r_lab">{{ this.maxItems }} : maxItems</label>
+</div>
+<br />
+<button (click)="_createComponent(false)">LoadItem</button>
 
 <label for="checkid"> save items on refresh </label>
 <input
@@ -10,6 +40,7 @@
   value="saveFlag"
   [(ngModel)]="saveFlag"
 />
+<br />
 
 <ng-container #container></ng-container>
 
